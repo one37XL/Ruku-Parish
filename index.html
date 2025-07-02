@@ -2,146 +2,214 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Our Lady of The Holy Rosary - Ruku Catholic Parish</title>
     
-    <title>Ruku Parish</title>
-    
-    <link
-      href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/jquery-ui.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-
     <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
-
     <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
-
     <link rel="stylesheet" href="css/aos.css" />
-
     <link rel="stylesheet" href="css/style.css" />
+    
     <style>
+      :root {
+        --primary-color: #003366; /* Deep blue */
+        --secondary-color: #FFD700; /* Gold */
+        --accent-color: #8B0000; /* Dark red */
+        --light-bg: #f8f9fa;
+        --text-dark: #333;
+        --text-light: #fff;
+      }
+      
+      body {
+        font-family: 'Quicksand', sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+      }
+      
+      /* Header Styles */
+      header.site-navbar {
+        background-color: var(--primary-color) !important;
+        padding: 15px 0;
+        box-shadow: 0 2px 10px rgba(218, 218, 218, 0.1);
+      }
+      
+      .site-logo a {
+        color: var(--text-light) !important;
+        font-weight: 700;
+        font-size: 24px !important;
+      }
+      
+      .site-logo .text-primary {
+        color: var(--secondary-color) !important;
+      }
+      
+      /* Navigation */
       .nav-link {
-    color: white !important;
-    transition: color 0.3s ease;
-  }
-  .nav-link:hover {
-    color: #FFD700 !important; /* Gold on hover */
-    cursor: pointer;
-  }
-
-  /* Mobile nav menu styles */
-  @media (max-width: 1199px) {
-    .site-menu.main-menu.js-clone-nav {
-      background-color: white !important; /* white background for mobile nav */
-      padding: 15px;
-    }
-    .site-menu.main-menu.js-clone-nav .nav-link {
-      color: black !important; /* black text on mobile */
-      display: block;
-      padding: 10px 0;
-    }
-    .site-menu.main-menu.js-clone-nav .nav-link:hover {
-      color: #003366 !important; /* Dark blue hover on mobile */
-    }
-  }
-  </style>
+        color: var(--text-light) !important;
+        font-weight: 500;
+        padding: 8px 15px !important;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover {
+        color: var(--secondary-color) !important;
+        transform: translateY(-2px);
+      }
+      
+      /* Mobile Menu */
+      #mobileMenu {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        display: none;
+      }
+      
+      #mobileMenu .nav-link {
+        color: var(--text-dark) !important;
+        display: block;
+        padding: 10px 0 !important;
+        border-bottom: 1px solid #eee;
+      }
+      
+      #mobileMenu .nav-link:hover {
+        color: var(--primary-color) !important;
+      }
+      
+      /* Hero Section */
+      .hero-section {
+        background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), 
+                    url('images/Ruku_Catholic.webp') no-repeat center center;
+        background-size: cover;
+        color: white;
+        padding: 120px 0;
+        text-align: center;
+      }
+      
+      /* About Section */
+      .about-section {
+        padding: 80px 0;
+      }
+      
+      .about-section h2 {
+        color: var(--primary-color);
+        position: relative;
+        padding-bottom: 15px;
+      }
+      
+      .about-section h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--secondary-color);
+      }
+      
+      /* Services Section */
+      .services-section {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 80px 0;
+      }
+      
+      .service-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+      }
+      
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+      
+      .service-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      .service-card h3 {
+        color: var(--primary-color);
+        padding: 15px;
+        margin: 0;
+      }
+      
+      /* Contact Section */
+      .contact-section {
+        padding: 80px 0;
+        background-color: var(--light-bg);
+      }
+      
+      .contact-info {
+        margin-bottom: 30px;
+      }
+      
+      .contact-info h4 {
+        color: var(--primary-color);
+      }
+      
+      /* Footer */
+      footer.site-footer {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 40px 0 20px;
+      }
+      
+      .footer-heading {
+        color: var(--secondary-color);
+        font-size: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      
+      .footer-heading:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--secondary-color);
+      }
+      
+      footer a {
+        color: white;
+        transition: color 0.3s ease;
+      }
+      
+      footer a:hover {
+        color: var(--secondary-color);
+        text-decoration: none;
+      }
+      
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        margin-top: 40px;
+      }
+    </style>
   </head>
-  <style>
-  /* Base theme */
-  .nav-link {
-    color: white !important;
-    transition: color 0.3s ease;
-  }
 
-  .nav-link:hover {
-    color: #FFD700 !important;
-    cursor: pointer;
-  }
-
-  /* Force mobile nav text to black and background white */
-  @media (max-width: 1199px) {
-    ul.site-menu,
-    ul.site-menu li,
-    ul.site-menu li a {
-      background-color: white !important;
-      color: black !important;
-    }
-
-    ul.site-menu li a.nav-link {
-      color: black !important;
-    }
-
-    ul.site-menu li a.nav-link:hover {
-      color: #003366 !important;
-    }
-  }
-    .site-menu .nav-link {
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    font-weight: 500;
-  }
-
-  /* Hover effect */
-  .site-menu .nav-link:hover {
-    color: #ffcc00 !important; /* Highlight color on hover */
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  /* Mobile Menu Styling */
-  #mobileMenu {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  #mobileMenu .nav-link {
-    color: black !important;
-    display: block;
-    padding: 10px 0;
-    font-weight: 500;
-    border-bottom: 1px solid #ddd;
-  }
-
-  #mobileMenu .nav-link:hover {
-    color: #003366 !important; /* Your theme color */
-    background-color: #f2f2f2;
-    border-radius: 5px;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 991px) {
-    .site-menu {
-      display: none !important; /* Ensure desktop menu doesn't show */
-    }
-
-    #mobileMenu {
-      display: none;
-    }
-  }
-</style>
-
-  <body
-    data-spy="scroll"
-    data-target=".site-navbar-target"
-    data-offset="300"
-    id="home-section"
-  >
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
     <div class="site-wrap">
+      <!-- Mobile Menu -->
       <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
           <div class="site-mobile-menu-close mt-3">
@@ -151,255 +219,247 @@
         <div class="site-mobile-menu-body"></div>
       </div>
 
-     <header
-  class="site-navbar js-sticky-header site-navbar-target"
-  role="banner"
-  style="padding: 25px 0; background-color: #003366; color: white !important;"
->
-  <div class="container">
-    <div class="row align-items-center">
+      <!-- Header -->
+      <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Logo -->
+            <div class="col-6 col-xl-3">
+              <h1 class="mb-0 site-logo">
+                <a href="index.html" class="h2 mb-0">
+                  Our Lady of The Holy Rosary<span class="text-primary">.</span>
+                </a>
+              </h1>
+            </div>
 
-      <!-- Logo Section -->
-      <div class="col-6 col-xl-3" style="font-size: 28px;">
-        <h1 class="mb-0 site-logo" style="margin: 0;">
-          <a href="index.html" class="h2 mb-0" style="font-size: 28px; color: white !important;">
-            Ruku Catholic Parish<span class="text-primary">.</span>
-          </a>
-        </h1>
-      </div>
+            <!-- Desktop Navigation -->
+            <div class="col-12 col-md-9 d-none d-xl-block">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+                <ul class="site-menu main-menu mr-auto d-none d-lg-block">
+                  <li><a href="index.html" class="nav-link">Home</a></li>
+                  <li><a href="Mass_order.html" class="nav-link">Mass Order</a></li>
+                  <li><a href="outstations.html" class="nav-link">Outstations</a></li>
+                  <li><a href="groups.html" class="nav-link">Groups</a></li>
+                  <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
 
-      <!-- Desktop Navigation -->
-      <div class="col-12 col-md-9 d-none d-xl-block">
-        <nav class="site-navigation position-relative text-right" role="navigation">
-          <ul class="site-menu main-menu mr-auto d-none d-lg-block" style="margin-bottom: 0;">
-            <li><a href="index.html" class="nav-link" style="color: white;">Home</a></li>
-            <li><a href="Mass_order.html" class="nav-link" style="color: white;">Mass Order</a></li>
-            <li><a href="outstations.html" class="nav-link" style="color: white;">Outstations</a></li>
-            <li><a href="groups.html" class="nav-link" style="color: white;">Groups</a></li>
-            <li><a href="#services-section" class="nav-link" style="color: white;">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+            <!-- Mobile Toggle -->
+            <div class="col-6 d-xl-none ml-md-0 py-3">
+              <button onclick="toggleMobileMenu()" class="site-menu-toggle float-right" style="background: none; border: none;">
+                <span class="icon-menu h3" style="color: white;"></span>
+              </button>
+            </div>
+          </div>
 
-      <!-- Mobile Toggle Button -->
-      <div class="col-6 d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;">
-        <button onclick="toggleMobileMenu()" class="site-menu-toggle float-right" style="background: none; border: none;">
-          <span class="icon-menu h3" style="color: white;"></span>
-        </button>
-      </div>
-    </div>
+          <!-- Mobile Menu -->
+          <div id="mobileMenu" style="display: none;">
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="Mass_order.html" class="nav-link">Mass Order</a></li>
+              <li><a href="outstations.html" class="nav-link">Outstations</a></li>
+              <li><a href="groups.html" class="nav-link">Groups</a></li>
+              <li><a href="#contact-section" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+<br>
+<br>
+<br>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" style="display: none; background-color: white; padding: 20px; margin-top: 10px;">
-      <ul class="list-unstyled" style="margin: 0;">
-        <li><a href="index.html" class="nav-link" style="color: black;">Home</a></li>
-        <li><a href="Mass_order.html" class="nav-link" style="color: black;">Mass Order</a></li>
-        <li><a href="outstations.html" class="nav-link" style="color: black;">Outstations</a></li>
-        <li><a href="groups.html" class="nav-link" style="color: black;">Groups</a></li>
-        <li><a href="#services-section" class="nav-link" style="color: black;">Contact</a></li>
-      </ul>
-    </div>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-10 text-center">
+              <h1 class="mb-4">Welcome to Ruku Catholic Parish</h1>
+              <p class="mb-5 lead">A vibrant community of faith in the Archdiocese of Nyeri</p>
+              <p><a href="#about-section" class="btn btn-primary px-4 py-3">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  </div>
-</header>
-
-<!-- Toggle Script -->
-<script>
-  function toggleMobileMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
-  }
-</script>
-
-<section style="padding: 100px 0;"></section>
-
-
-
-      <section class="site-section bg-light" id="training-section">
+      <!-- About Section -->
+      <section class="site-section about-section" id="about-section">
         <div class="container">
           <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
-              <h2 class="text-black">Our Lady of The Holy Rosary Ruku Parish</h2>
-              <p>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestiae omnis dolores non quaerat ducimus magnam esse minus qui, quis, sunt quod aliquam facere et provident enim reprehenderit. Ducimus, accusamus!
+              <h2 class="text-black">Our Parish</h2>
+              <p class="lead">
+                Ruku Catholic Parish, dedicated to Our Lady of the Holy Rosary, serves as a spiritual home 
+                for Catholics in the Ruku area and surrounding communities. We are committed to fostering 
+                faith, community, and service to others.
               </p>
             </div>
           </div>
+          
+          <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+              <img src="images/Ruku_Catholic.webp" alt="Ruku Catholic Church" class="img-fluid rounded" style="max-height: 500px;">
+            </div>
+          </div>
+        </div>
       </section>
 
-<section style="width: 100%; text-align: center; margin: 40px 0;">
-  <img 
-    src="images/Ruku_Catholic.webp" 
-    alt="Large Display Image" 
-    style="max-width: 100%; height: auto; display: inline-block; border-radius: 8px;"
-  />
-</section>
+      <!-- Services/Activities Section -->
+      <section class="services-section" id="services-section">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-7 text-center">
+              <h2>Our Parish Activities</h2>
+              <p>
+                We offer various spiritual and community programs to help our members grow in faith and serve one another.
+              </p>
+            </div>
+          </div>
 
-
-     <section class="site-section bg-primary" id="services-section">
-  <div class="container">
-    <div class="row mb-5 justify-content-center">
-      <div class="col-md-7 text-center">
-        <h2 class="text-white">Our Services</h2>
-        <p class="text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-          eveniet assumenda molestias quae in, distinctio rem veritatis
-          praesentium?
-        </p>
-      </div>
-    </div>
-
-    <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
-      <div class="service bg-white">
-        <div class="icon">
-          <img src="images/Ruku_Parish_Office.webp" alt="" style="object-fit: cover; width: 100%; height: 250px;" />
+          <div class="row">
+            <div class="col-md-4">
+              <div class="service-card">
+                <img src="images/Ruku_Parish_Office.webp" alt="Sunday Mass">
+                <h3>Sunday Mass</h3>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="service-card">
+                <img src="images/rukuCC.png" alt="Bible Study">
+                <h3>Bible Study Groups</h3>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="service-card">
+                <img src="images/Ruku_Catholic.webp" alt="Youth Program">
+                <h3>Youth Programs</h3>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3 class="text-black mb-3">Online Coaching</h3>
-      </div>
+      </section>
 
-      <div class="service bg-white">
-        <div class="icon">
-          <img src="images/rukuCC.png" alt="" style="object-fit: cover; width: 100%; height: 250px;" />
-        </div>
-        <h3 class="text-black mb-3">Transforming Lives</h3>
-      </div>
-
-      <div class="service bg-white">
-        <div class="icon">
-          <img src="images/Ruku_Catholic.webp" alt="" style="object-fit: cover; width: 100%; height: 250px;" />
-        </div>
-        <h3 class="text-black mb-3">Life Coach Training</h3>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <div class="site-section bg-light" id="contact-section">
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact-section">
         <div class="container">
           <div class="row">
             <div class="col-12 text-center mb-5">
-              <h2 class="text-black">Contact</h2>
+              <h2 class="text-black">Contact Us</h2>
             </div>
           </div>
+          
           <div class="row mb-5">
-            <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-              <p class="mb-0 font-weight-bold text-primary">Address</p>
-              <p class="mb-4">
-                Ruku Catholic Church
-              </p>
+            <div class="col-md-4 mb-4 mb-lg-0">
+              <div class="contact-info text-center">
+                <span class="icon icon-map-marker mb-3 d-block"></span>
+                <h4>Address</h4>
+                <p>Ruku Catholic Church<br>P.O Box 123, Ruku</p>
+              </div>
             </div>
-
-            <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-              <p class="mb-0 font-weight-bold text-primary">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+            
+            <div class="col-md-4 mb-4 mb-lg-0">
+              <div class="contact-info text-center">
+                <span class="icon icon-phone mb-3 d-block"></span>
+                <h4>Phone</h4>
+                <p>+254 722 123456<br>+254 733 987654</p>
+              </div>
             </div>
-            <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-              <p class="mb-0 font-weight-bold text-primary">Email Address</p>
-              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+            
+            <div class="col-md-4 mb-4 mb-lg-0">
+              <div class="contact-info text-center">
+                <span class="icon icon-envelope mb-3 d-block"></span>
+                <h4>Email</h4>
+                <p>info@rukucatholic.org<br>parish@rukucatholic.org</p>
+              </div>
             </div>
           </div>
+          
           <div class="row">
-            <div class="col-lg-12 mb-5">
-              <form action="#" method="post">
+            <div class="col-lg-8 mx-auto">
+              <form action="#" method="post" class="p-5 bg-white rounded">
+                <h3 class="mb-4 text-center">Send Us a Message</h3>
                 <div class="form-group row">
                   <div class="col-md-6 mb-3 mb-md-0">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="First name"
-                    />
+                    <input type="text" class="form-control" placeholder="First name">
                   </div>
                   <div class="col-md-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="First name"
-                    />
+                    <input type="text" class="form-control" placeholder="Last name">
                   </div>
                 </div>
 
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Email address"
-                    />
+                    <input type="email" class="form-control" placeholder="Email address">
                   </div>
                 </div>
 
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <textarea
-                      name=""
-                      id=""
-                      class="form-control"
-                      placeholder="Write your message."
-                      cols="30"
-                      rows="10"
-                    ></textarea>
+                    <textarea class="form-control" placeholder="Write your message." rows="5"></textarea>
                   </div>
                 </div>
+                
                 <div class="form-group row">
-                  <div class="col-md-6 mr-auto">
-                    <input
-                      type="submit"
-                      class="btn btn-block btn-primary text-white py-2 px-5"
-                      value="Send Message"
-                    />
+                  <div class="col-md-6 mx-auto">
+                    <input type="submit" class="btn btn-primary btn-block py-2 px-4" value="Send Message">
                   </div>
                 </div>
               </form>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-     <footer class="site-footer bg-primary text-white" style="padding: 20px 0;">
-  <div class="container">
-    <div class="row">
-      <!-- About Section -->
-      <div class="col-md-4">
-        <h2 class="footer-heading mb-4">Psalms</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem officiis
-          dolorem assumenda alias mollitia reprehenderit dolor facilis.
-        </p>
-      </div>
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="footer-heading mb-4">About Our Parish</h2>
+              <p>
+                Our Lady of the Holy Rosary Ruku Parish is part of the Archdiocese of Nyeri. 
+                We are committed to serving our community through worship, education, and charity.
+              </p>
+            </div>
 
-      <!-- Quick Links -->
-      <div class="col-md-3 ml-auto">
-        <h2 class="footer-heading mb-4">Quick Links</h2>
-        <ul class="list-unstyled">
-          <li><a href="#about-section" class="smoothscroll text-white">About Us</a></li>
-          <li><a href="#training-section" class="smoothscroll text-white">Our Training</a></li>
-          <li><a href="#services-section" class="smoothscroll text-white">Services</a></li>
-          <li><a href="#testimonials-section" class="smoothscroll text-white">Testimonials</a></li>
-          <li><a href="#contact-section" class="smoothscroll text-white">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
+            <div class="col-md-3 ml-auto">
+              <h2 class="footer-heading mb-4">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Mass_order.html">Mass Order</a></li>
+                <li><a href="outstations.html">Outstations</a></li>
+                <li><a href="groups.html">Groups</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-md-4">
+              <h2 class="footer-heading mb-4">Mass Times</h2>
+              <ul class="list-unstyled">
+                <li><strong>Sunday:</strong> 7:00 AM, 9:00 AM, 11:00 AM</li>
+                <li><strong>Weekdays:</strong> 6:30 AM, 5:30 PM</li>
+                <li><strong>Saturday:</strong> 6:30 PM (Vigil Mass)</li>
+              </ul>
+            </div>
+          </div>
 
-    <!-- Footer Bottom -->
-    <div class="row" style="padding-top: 10px; margin-top: 10px;">
-      <div class="col-md-12">
-        <div class="border-top" style="padding-top: 10px;">
-          <p style="color: white; text-align: center;">
-            <small>
-              &copy; <script>document.write(new Date().getFullYear());</script>
-              | All rights reserved | Ruku Catholic Church
-            </small>
-          </p>
+          <div class="row footer-bottom">
+            <div class="col-md-12 text-center">
+              <p>
+                <small>
+                  &copy; <script>document.write(new Date().getFullYear());</script> 
+                  Our Lady of the Holy Rosary Ruku Parish. All rights reserved.
+                </small>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
-  </div>
-</footer>
 
-
-    </div>
-    <!-- .site-wrap -->
-
+    <!-- JavaScript -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/popper.min.js"></script>
@@ -411,33 +471,20 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestia
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
-
-    <script src="js/typed.js"></script>
+    <script src="js/main.js"></script>
+    
     <script>
-      var typed = new Typed(".typed-words", {
-        strings: [" Business Speakers", " Life Coach"],
-        typeSpeed: 80,
-        backSpeed: 80,
-        backDelay: 4000,
-        startDelay: 1000,
-        loop: true,
-        showCursor: true,
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+      }
+      
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('mobileMenu').style.display = 'none';
+        });
       });
     </script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.js-menu-toggle');
-    const menu = document.querySelector('.js-clone-nav');
-
-    if (menuToggle && menu) {
-      menuToggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        menu.classList.toggle('active');
-      });
-    }
-  });
-</script>
-
-    <script src="js/main.js"></script>
   </body>
 </html>

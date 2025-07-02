@@ -5,239 +5,296 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Outstations - Ruku Catholic Church</title>
     <style>
-      body {
-        background-color: #004080; /* Theme background (deep blue) */
-        color: white;
-        margin: 0;
-        font-family: Arial, sans-serif;
+      :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #ffc107;
+        --dark-blue: #002f5f;
+        --light-bg: #f8f9fa;
+        --text-dark: #333;
+        --text-light: white;
       }
-
-      .nav-link {
-        color: white !important;
+      
+      body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+      
+      header {
+        background-color: var(--primary-color);
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      h1 {
+        margin: 0;
+        font-size: 1.8rem;
+      }
+      
+      .accent {
+        color: var(--secondary-color);
+      }
+      
+      nav a {
+        color: var(--text-light);
         text-decoration: none;
-        margin: 0 10px;
+        margin: 0 15px;
         font-weight: 500;
         transition: color 0.3s ease;
       }
-
-      .nav-link:hover {
-        color: #ffd700 !important; /* Gold or any theme highlight */
-        cursor: pointer;
+      
+      nav a:hover {
+        color: var(--secondary-color);
       }
-
-      nav ul {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
+      
+      nav a.active {
+        color: var(--secondary-color);
+        font-weight: 600;
+      }
+      
+      .content-section {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 30px;
+        background-color: white;
+        color: var(--text-dark);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      h2 {
+        color: var(--primary-color);
+        margin-top: 0;
+        border-bottom: 2px solid var(--light-bg);
+        padding-bottom: 10px;
+      }
+      
+      .outstation-card {
         display: flex;
-        justify-content: center;
-        background-color: #002f5f; /* Slightly darker navbar */
-        padding: 15px 0;
+        align-items: center;
+        background-color: var(--light-bg);
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-
-      nav ul li {
-        display: inline;
+      
+      .outstation-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .outstation-img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 20px;
+        border: 3px solid var(--primary-color);
+      }
+      
+      .outstation-info {
+        flex: 1;
+      }
+      
+      .outstation-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin: 0 0 5px 0;
+      }
+      
+      .outstation-details {
+        margin: 5px 0;
+        font-size: 0.95rem;
+      }
+      
+      .outstation-contact {
+        color: var(--dark-blue);
+        font-weight: 500;
+      }
+      
+      .back-button {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+      }
+      
+      .back-button:hover {
+        background-color: var(--dark-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        nav {
+          margin-top: 15px;
+        }
+        
+        nav a {
+          display: block;
+          margin: 10px 0;
+        }
+        
+        .content-section {
+          padding: 20px;
+          margin: 20px 15px;
+        }
+        
+        .outstation-card {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        .outstation-img {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
       }
     </style>
   </head>
-  <body
-    style="
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0d6efd;
-      color: white;
-    "
-  >
+
+  <body>
     <!-- Header -->
-    <header style="background-color: #0d6efd; padding: 20px">
-      <div
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        "
-      >
-        <h1 style="margin: 0; font-size: 1.8rem">
-          Ruku Catholic Church<span style="color: #ffc107">.</span>
-        </h1>
+    <header>
+      <div class="header-container">
+        <h1>Ruku Catholic Church<span class="accent">.</span></h1>
         <nav>
-          <a
-            href="index.html#home-section"
-            style="color: white; text-decoration: none; margin: 0 15px"
-            >Home</a
-          >
-          <a
-            href="massorder.html"
-            style="color: white; text-decoration: none; margin: 0 15px"
-            >Mass Order</a
-          >
-          <a
-            href="outstations.html"
-            style="color: #ffc107; text-decoration: none; margin: 0 15px"
-            >Outstations</a
-          >
-          <a
-            href="groups.html"
-            style="color: white; text-decoration: none; margin: 0 15px"
-            >Groups</a
-          >
+          <a href="index.html#home-section">Home</a>
+          <a href="Mass_order.html">Mass Order</a>
+          <a href="outstations.html" class="active">Outstations</a>
+          <a href="groups.html">Groups</a>
         </nav>
       </div>
     </header>
 
-    <!-- Spacer -->
-    <div style="height: 50px"></div>
-
     <!-- Content Section -->
-    <section
-      style="
-        max-width: 900px;
-        margin: auto;
-        padding: 30px;
-        background-color: white;
-        color: #000;
-        border-radius: 10px;
-      "
-    >
-      <h2 style="color: #0d6efd">Our Outstations</h2>
+    <main class="content-section">
+      <h2>Our Outstations</h2>
       <p style="font-size: 1.1rem">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eum
-        repellendus obcaecati maxime dicta, accusamus numquam amet repudiandae.
-        Quos ad laboriosam quasi distinctio nemo saepe aut dolorum tempora
-        mollitia cum!
+        Ruku Catholic Church serves several outstations in the surrounding areas. 
+        These smaller worship centers allow us to bring the sacraments and pastoral 
+        care closer to communities throughout our parish territory.
       </p>
 
       <ul style="padding-left: 0; list-style: none">
         <li>
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              border: 1px solid #ffffff;
-              border-radius: 10px;
-              padding: 10px;
-              margin-bottom: 15px;
-              background-color: #f8f9fa;
-            "
-          >
+          <div class="outstation-card">
             <img
               src="images/Ruku_Catholic.webp"
-              alt="St."
-              style="
-                width: 60px;
-                height: 60px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin-right: 15px;
-              "
+              alt="St. Peter Outstation"
+              class="outstation-img"
             />
-            <span style="font-size: 1.1rem; color: #000">St. Peter</span>
+            <div class="outstation-info">
+              <h3 class="outstation-name">St. Peter Outstation</h3>
+              <p class="outstation-details">
+                <strong>Location:</strong> 5km North of Ruku Center<br>
+                <strong>Mass Schedule:</strong> Sundays at 10:00 AM (Kiswahili)
+              </p>
+              <p class="outstation-contact">
+                <strong>Contact:</strong> John Mwangi - 0722 123 456
+              </p>
+            </div>
           </div>
         </li>
+        
         <li>
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              border: 1px solid #ffffff;
-              border-radius: 10px;
-              padding: 10px;
-              margin-bottom: 15px;
-              background-color: #f8f9fa;
-            "
-          >
+          <div class="outstation-card">
             <img
               src="images/Ruku_Catholic.webp"
-              alt="St."
-              style="
-                width: 60px;
-                height: 60px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin-right: 15px;
-              "
+              alt="St. Paul Outstation"
+              class="outstation-img"
             />
-            <span style="font-size: 1.1rem; color: #000">St. Paul</span>
+            <div class="outstation-info">
+              <h3 class="outstation-name">St. Paul Outstation</h3>
+              <p class="outstation-details">
+                <strong>Location:</strong> Ruku East near Market<br>
+                <strong>Mass Schedule:</strong> Sundays at 8:00 AM (English)
+              </p>
+              <p class="outstation-contact">
+                <strong>Contact:</strong> Paul Kamau - 0723 456 789
+              </p>
+            </div>
           </div>
         </li>
+        
         <li>
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              border: 1px solid #ffffff;
-              border-radius: 10px;
-              padding: 10px;
-              margin-bottom: 15px;
-              background-color: #f8f9fa;
-            "
-          >
+          <div class="outstation-card">
             <img
               src="images/Ruku_Catholic.webp"
-              alt="St."
-              style="
-                width: 60px;
-                height: 60px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin-right: 15px;
-              "
+              alt="St. Mary Outstation"
+              class="outstation-img"
             />
-            <span style="font-size: 1.1rem; color: #000">St. Mary</span>
+            <div class="outstation-info">
+              <h3 class="outstation-name">St. Mary Outstation</h3>
+              <p class="outstation-details">
+                <strong>Location:</strong> Ruku West Village<br>
+                <strong>Mass Schedule:</strong> Saturdays at 4:00 PM (Kikuyu)
+              </p>
+              <p class="outstation-contact">
+                <strong>Contact:</strong> Mary Wanjiku - 0711 222 333
+              </p>
+            </div>
           </div>
         </li>
+        
         <li>
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              border: 1px solid #ffffff;
-              border-radius: 10px;
-              padding: 10px;
-              margin-bottom: 15px;
-              background-color: #f8f9fa;
-            "
-          >
+          <div class="outstation-card">
             <img
               src="images/Ruku_Catholic.webp"
-              alt="St."
-              style="
-                width: 60px;
-                height: 60px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin-right: 15px;
-              "
+              alt="St. Joseph Outstation"
+              class="outstation-img"
             />
-            <span style="font-size: 1.1rem; color: #000">St. Joseph</span>
+            <div class="outstation-info">
+              <h3 class="outstation-name">St. Joseph Outstation</h3>
+              <p class="outstation-details">
+                <strong>Location:</strong> Ruku South near Primary School<br>
+                <strong>Mass Schedule:</strong> Sundays at 11:30 AM (Kiswahili)
+              </p>
+              <p class="outstation-contact">
+                <strong>Contact:</strong> Joseph Maina - 0720 444 555
+              </p>
+            </div>
           </div>
         </li>
-        <ul style="padding-left: 0; list-style: none"></ul>
       </ul>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eaque
-        asperiores incidunt accusamus velit odio quasi quod placeat! Ducimus non
-        nemo dolores ut quibusdam recusandae id excepturi aut natus inventore.
+        For more information about any of our outstations or to inquire about 
+        starting a new outstation in your area, please contact the parish office 
+        or speak with one of our priests after Mass.
       </p>
 
       <!-- Back to Home Button -->
       <div style="text-align: center; margin-top: 30px">
-        <a
-          href="index.html#home-section"
-          style="
-            background-color: #0d6efd;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-          "
-        >
+        <a href="index.html#home-section" class="back-button">
           ← Back to Home
         </a>
       </div>
-    </section>
+    </main>
   </body>
 </html>

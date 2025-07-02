@@ -6,10 +6,11 @@
     <title>Groups - Ruku Catholic Church</title>
     <style>
       body {
-        background-color: #004080; /* Theme background (deep blue) */
-        color: white;
+        background-color: #f5f5f5;
+        color: #333;
         margin: 0;
         font-family: Arial, sans-serif;
+        line-height: 1.6;
       }
 
       .nav-link {
@@ -21,7 +22,7 @@
       }
 
       .nav-link:hover {
-        color: #ffd700 !important; /* Gold or any theme highlight */
+        color: #ffd700 !important;
         cursor: pointer;
       }
 
@@ -31,53 +32,90 @@
         margin: 0;
         display: flex;
         justify-content: center;
-        background-color: #002f5f; /* Slightly darker navbar */
+        background-color: #002f5f;
         padding: 15px 0;
       }
 
       nav ul li {
         display: inline;
       }
+
+      .group-card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .group-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .group-title {
+        margin-top: 0;
+        color: #0073e6;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+      }
+
+      .back-button {
+        background-color: #004080;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+      }
+
+      .back-button:hover {
+        background-color: #002f5f;
+      }
+
+      header {
+        background-color: #004080;
+        padding: 20px 15px;
+        text-align: center;
+      }
+
+      h1 {
+        color: white;
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        text-align: center;
+        color: #004080;
+        margin-bottom: 30px;
+      }
+
+      footer {
+        background-color: #004080;
+        color: white;
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 0.9rem;
+      }
     </style>
   </head>
-  <body
-    style="
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    "
-  >
+  <body>
     <!-- Header -->
-    <header
-      style="background-color: #004080; padding: 20px 15px; text-align: center"
-    >
-      <h1 style="color: white; margin: 0; font-size: 2.5rem">
-        Ruku Catholic Church - Groups
-      </h1>
+    <header>
+      <h1>Ruku Catholic Church - Groups</h1>
     </header>
 
+    <!-- Navigation -->
+
     <div style="text-align: center; margin: 20px 0">
-      <a
-        href="index.html"
-        style="
-          background-color: #004080;
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
-          padding: 10px 25px;
-          border: none;
-          border-radius: 6px;
-          font-size: 16px;
-          cursor: pointer;
-          display: inline-block;
-          transition: background-color 0.3s ease;
-        "
-        onmouseover="this.style.backgroundColor='#002f5f';"
-        onmouseout="this.style.backgroundColor='#004080';"
-      >
-        &larr; Back to Home
-      </a>
+      <a href="index.html" class="back-button">&larr; Back to Home</a>
     </div>
 
     <!-- Spacer below header -->
@@ -85,100 +123,73 @@
 
     <!-- Groups Section -->
     <section style="max-width: 900px; margin: 0 auto; padding: 0 15px">
-      <h2 style="text-align: center; color: #004080; margin-bottom: 30px">
-        Our Church Groups
-      </h2>
+      <h2>Our Church Groups</h2>
 
-      <!-- Group Card Example -->
+      <!-- Group Cards -->
+      <div class="group-card">
+        <h3 class="group-title">Catholic Men Association (CMA)</h3>
+        <p>
+          The Catholic Men Association brings together men of all ages to grow in faith, serve the community, 
+          and support one another in living out Catholic values. We meet every Saturday morning for prayer, 
+          fellowship, and discussions on applying our faith in daily life.
+        </p>
+        <p><strong>Meeting Time:</strong> Saturdays, 8:00 AM</p>
+        <p><strong>Contact:</strong> John Mwangi - 0722 123 456</p>
+      </div>
 
-      <div
-        style="
-          background-color: white;
-          border-radius: 8px;
-          padding: 20px;
-          margin-bottom: 20px;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        "
-      >
-        <h3 style="margin-top: 0; color: #0073e6">Catholic Men Association</h3>
+      <div class="group-card">
+        <h3 class="group-title">Catholic Women Association (CWA)</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
-          repellendus repellat minus delectus ut maiores quisquam. Fugit earum
-          ratione inventore, dicta in voluptatibus adipisci amet voluptas
-          perferendis, maxime laudantium molestias?
+          The Catholic Women Association is a vibrant group dedicated to spiritual growth, charitable works, 
+          and supporting the church and community. Our activities include prayer meetings, fundraising for 
+          church projects, and visiting the sick.
         </p>
+        <p><strong>Meeting Time:</strong> Wednesdays, 2:00 PM</p>
+        <p><strong>Contact:</strong> Mary Wanjiku - 0723 456 789</p>
       </div>
-      <div
-        style="
-          background-color: white;
-          border-radius: 8px;
-          padding: 20px;
-          margin-bottom: 20px;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        "
-      >
-        <h3 style="margin-top: 0; color: #0073e6">
-          Catholic Women Association
-        </h3>
+
+      <div class="group-card">
+        <h3 class="group-title">Young Catholic Association (YCA)</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam
-          asperiores eaque expedita sapiente provident harum eius nulla tenetur.
-          Et harum id fuga officia doloribus magni, delectus dolores inventore
-          ipsam?
+          For young adults aged 18-35, the YCA provides a space to explore faith, build relationships, 
+          and serve the community. We organize retreats, social events, and volunteer opportunities 
+          while deepening our understanding of Catholic teachings.
         </p>
+        <p><strong>Meeting Time:</strong> Fridays, 5:30 PM</p>
+        <p><strong>Contact:</strong> Paul Kimani - 0711 987 654</p>
       </div>
-      <div
-        style="
-          background-color: white;
-          border-radius: 8px;
-          padding: 20px;
-          margin-bottom: 20px;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        "
-      >
-        <h3 style="margin-top: 0; color: #0073e6">
-          Young Catholic Association
-        </h3>
+
+      <div class="group-card">
+        <h3 class="group-title">Youth Serving Christ (YSC)</h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
-          veritatis, eum assumenda iure ut odio dolor officiis nobis unde
-          perferendis quisquam nostrum quos aperiam quia quo voluptatum
-          laudantium nemo nam!
+          Our youth group for teens (13-18 years) focuses on faith formation through dynamic discussions, 
+          music, and service projects. We help young people navigate modern challenges while staying true 
+          to Catholic values.
         </p>
+        <p><strong>Meeting Time:</strong> Sundays after Mass</p>
+        <p><strong>Contact:</strong> Sr. Grace - 0720 111 222</p>
       </div>
-      <div
-        style="
-          background-color: white;
-          border-radius: 8px;
-          padding: 20px;
-          margin-bottom: 20px;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        "
-      >
-        <h3 style="margin-top: 0; color: #0073e6">Youth Serving Christ</h3>
+
+      <div class="group-card">
+        <h3 class="group-title">Parish Missionary Childhood (PMC)</h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
-          corporis, quas, nisi blanditiis laudantium maxime ea cumque
-          reprehenderit sit iusto, consequatur a incidunt sint quaerat vitae.
-          Delectus reprehenderit sapiente aliquam?
+          The PMC helps children (6-12 years) learn about their faith in fun and engaging ways while 
+          developing a missionary spirit. Through games, songs, and activities, we nurture the seeds 
+          of faith in our youngest parishioners.
         </p>
+        <p><strong>Meeting Time:</strong> Sundays, 10:00 AM</p>
+        <p><strong>Contact:</strong> Teacher Ann - 0733 555 777</p>
       </div>
-      <div
-        style="
-          background-color: white;
-          border-radius: 8px;
-          padding: 20px;
-          margin-bottom: 20px;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        "
-      >
-        <h3 style="margin-top: 0; color: #0073e6">PMC</h3>
+
+      <div class="group-card">
+        <h3 class="group-title">Legion of Mary</h3>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
-          cumque explicabo ullam eligendi tempora dolore incidunt pariatur
-          veniam! Impedit cumque quo minima animi debitis nobis eius architecto
-          iure dignissimos asperiores.
+          The Legion of Mary is a worldwide apostolic organization of lay Catholics who, with the sanction 
+          of the Church and under the powerful leadership of Mary Immaculate, serve the Church and their 
+          neighbor on a voluntary basis.
         </p>
+        <p><strong>Meeting Time:</strong> Tuesdays, 4:00 PM</p>
+        <p><strong>Contact:</strong> Joseph Kamau - 0724 888 999</p>
       </div>
     </section>
 
@@ -186,15 +197,7 @@
     <div style="height: 60px"></div>
 
     <!-- Footer -->
-    <footer
-      style="
-        background-color: #004080;
-        color: white;
-        text-align: center;
-        padding: 15px 10px;
-        font-size: 0.9rem;
-      "
-    >
+    <footer>
       &copy;
       <script>
         document.write(new Date().getFullYear());
